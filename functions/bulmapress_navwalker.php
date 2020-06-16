@@ -47,10 +47,10 @@ class bulmapress_navwalker extends Walker_Nav_Menu {
 	public function end_el(&$output, $item, $depth = 0, $args = array(), $id = 0 ){
 
 		if(in_array("has_children", $item->classes)) {
-
 			$output .= "</div>";
+		} else {
+			$output .= "</a>";
 		}
-		$output .= "</a>";
 	}
 
 	public function end_lvl (&$output, $depth = 0, $args = array()) {
